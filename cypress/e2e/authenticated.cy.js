@@ -1,10 +1,12 @@
 import { faker } from '@faker-js/faker/locale/en'
 
-describe('CRUD', () => {
+describe('Scenarios where authentication is a pre-condition', () => {
+  beforeEach(() => {
+    cy.sessionLogin()
+  })
+
   it('CRUDs a note', () => {
     const noteDescription = faker.lorem.words(4)
-
-    cy.sessionLogin()
 
     cy.createNote(noteDescription)
 
@@ -13,5 +15,9 @@ describe('CRUD', () => {
     cy.editNote(noteDescription, updatedNoteDescription)
 
     cy.deleteNote(updatedNoteDescription)
+  })
+
+  it.only('successfully submits the settings form', () => {
+    cy.fillSettingsFormAndSubmit()
   })
 })
