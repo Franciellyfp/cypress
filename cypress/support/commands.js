@@ -61,5 +61,12 @@ Cypress.Commands.add('fillSettingsFormAndSubmit', () => {
   cy.get('@iframe').find('[name="cvc"]').type('123')
   cy.get('@iframe').find('[name="postal"]').type('12345')
   cy.contains('button', 'Purchase').click()
+  cy.contains('h1', 'Your Notes').should('be.visible')
+})
+
+Cypress.Commands.add('logout', () => {
+  cy.visit('/')
+  cy.contains('.nav a', 'Logout').click()
+  cy.get('#email').should('be.visible')
 })
 

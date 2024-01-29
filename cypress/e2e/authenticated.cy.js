@@ -17,7 +17,11 @@ describe('Scenarios where authentication is a pre-condition', () => {
     cy.deleteNote(updatedNoteDescription)
   })
 
-  it.only('successfully submits the settings form', () => {
+  it('successfully submits the settings form', () => {
     cy.fillSettingsFormAndSubmit()
+  })
+
+  it('logs out', () => {
+    cy.logout()
   })
 })
