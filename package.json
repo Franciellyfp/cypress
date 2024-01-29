@@ -7,7 +7,8 @@
     "lint": "eslint cypress/**/*.js && eslint cypress.config.js",
     "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.config.js --fix",
     "test": "cypress run",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "test-cloud": "cypress run --record --tag 'desktop'"
   },
   "keywords": [],
   "author": "",
