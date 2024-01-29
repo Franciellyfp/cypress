@@ -30,7 +30,7 @@ Cypress.Commands.add('createNote', (note) => {
   cy.visit('/notes/new')
   cy.get('#content').type(note)
   cy.contains('button', 'Create').click()
-  
+
   cy.contains('.list-group-item', note).should('be.visible')
 })
 
