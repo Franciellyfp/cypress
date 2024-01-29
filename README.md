@@ -26,8 +26,7 @@ Make a copy of the [`cypress.env.example.json`](./cypress.env.example.json) file
 
 ## Running the tests
 
-In this project, you can run tests in interactive and headless modes, both on desktop and tablet viewports.
-
+In this project, you can run tests in interactive and headless modes
 ### Headless mode
 
 Run `npm test` to run all tests in headless mode using a desktop viewport.
